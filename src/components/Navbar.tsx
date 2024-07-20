@@ -1,8 +1,10 @@
 import { useState } from "react";
 import menuIcon from "../assets/menu.svg";
+import closeIcon from "../assets/close.svg";
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setOpen] = useState(false);
+  const [isActive, setActive] = useState(false);
 
   return (
     <nav className="flex justify-between max-w-screen-xl mx-auto mt-6 px-5 flex-wrap">
@@ -33,29 +35,32 @@ const Navbar = () => {
         </div>
         <div className="md:hidden cursor-pointer">
           <img
-            src={menuIcon}
-            width={32}
+            src={isActive ? closeIcon : menuIcon}
+            width={isActive ? 24 : 32}
             className="text-xl focus:outline-none"
-            onClick={() => setIsOpen(!isOpen)}
+            onClick={() => {
+              setOpen(!isOpen);
+              setActive(!isActive);
+            }}
             alt=""
           />
         </div>
       </div>
       {isOpen && (
-        <div className="md:hidden w-full p-3">
-          <ul className="flex flex-col gap-5 items-center justify-center mx-auto">
+        <div className="md:hidden w-full py-20 mt-10 bg-white absolute left-0">
+          <ul className="flex flex-col gap-10 items-center mx-auto">
             <li>
-              <a href="/work" className="text-2xl">
+              <a href="/work" className="text-6xl">
                 Work
               </a>
             </li>
             <li>
-              <a href="/about" className="text-2xl">
+              <a href="/about" className="text-6xl">
                 About
               </a>
             </li>
             <li>
-              <a href="/contact" className="text-2xl">
+              <a href="/contact" className="text-6xl">
                 Contact
               </a>
             </li>
