@@ -11,7 +11,7 @@ const Hero = () => {
           I am web developer that helps brands fit and thrive culture. I resolve
           consumer challenges explore new creative perspectives.
         </p>
-        <div className="p-3 px-6 rounded-full justify-center items-center gap-3 bg-neutral-100 flex">
+        <div className="p-3 px-6 rounded-full justify-center items-center gap-3 bg-green-100 ring-1 ring-green-200 flex">
           <span className="w-2 h-2 bg-green-500 rounded-full"></span>
           <a href="mailto:anasobaidpk@gmail.com" className="text-xl">
             Available for work
