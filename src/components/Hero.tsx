@@ -7,7 +7,7 @@ const Hero = () => {
         <h1 className="text-7xl md:text-9xl xl:text-[160px] text-center font-medium tracking-tight">
           Anas Obaid
         </h1>
-        <p className="text-2xl text-center max-w-lg">
+        <p className="text-2xl tracking-wide text-center max-w-lg">
           I am web developer that helps brands fit and thrive culture. I resolve
           consumer challenges explore new creative perspectives.
         </p>
