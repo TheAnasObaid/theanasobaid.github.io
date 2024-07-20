@@ -47,7 +47,7 @@ const Navbar = () => {
         </div>
       </div>
       {isOpen && (
-        <div className="md:hidden w-full py-20 mt-10 bg-white absolute left-0">
+        <div className="md:hidden w-full py-20 mt-10 bg-[#fcfbf7] z-10 absolute left-0">
           <ul className="flex flex-col gap-10 items-center mx-auto">
             <li>
               <a href="/work" className="text-6xl">
