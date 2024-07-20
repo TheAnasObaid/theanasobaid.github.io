@@ -12,7 +12,10 @@ const Hero = () => {
           consumer challenges explore new creative perspectives.
         </p>
         <div className="p-3 px-6 rounded-full justify-center items-center gap-3 bg-green-100 ring-1 ring-green-200 flex">
-          <span className="w-2 h-2 bg-green-500 rounded-full"></span>
+          <span className="relative flex h-2.5 w-2.5">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-85"></span>
+            <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-500"></span>
+          </span>
           <a href="mailto:anasobaidpk@gmail.com" className="text-xl">
             Available for work
           </a>
