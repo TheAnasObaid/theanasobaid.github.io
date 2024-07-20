@@ -1,5 +1,7 @@
+import Navbar from "./components/Navbar";
+
 const App = () => {
-  return <h1 className="text-5xl text-gray-900">Anas Obaid</h1>;
+  return <Navbar />;
 };
 
 export default App;
