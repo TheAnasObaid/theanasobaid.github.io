@@ -5,7 +5,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="flex justify-between max-w-screen-lg mx-auto mt-6 px-5 flex-wrap">
+    <nav className="flex justify-between max-w-screen-xl mx-auto mt-6 px-5 flex-wrap">
       <div className="container mx-auto flex justify-between items-center">
         <div>
           <a href="/" className="text-2xl">
