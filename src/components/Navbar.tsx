@@ -1,35 +1,36 @@
 import { useState } from "react";
 import menuIcon from "../assets/menu.svg";
 import closeIcon from "../assets/close.svg";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setOpen] = useState(false);
   const [isActive, setActive] = useState(false);
 
   return (
-    <nav className="flex justify-between max-w-screen-xl mx-auto mt-6 px-5 flex-wrap">
+    <nav className="flex justify-between my-6 flex-wrap">
       <div className="container mx-auto flex justify-between items-center">
         <div>
-          <a href="/" className="text-2xl">
+          <Link to="/" className="text-2xl">
             Anas Obaid
-          </a>
+          </Link>
         </div>
         <div className="hidden md:flex space-x-6">
           <ul className="flex gap-10 items-center">
             <li>
-              <a href="/work" className="text-xl">
+              <Link to="/work" className="text-xl">
                 Work
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/about" className="text-xl">
+              <Link to="/about" className="text-xl">
                 About
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/contact" className="text-xl">
+              <Link to="/contact" className="text-xl">
                 Contact
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
