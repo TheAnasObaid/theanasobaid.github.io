@@ -49,19 +49,40 @@ const Navbar = () => {
         <div className="md:hidden w-full py-20 mt-10 bg-[#fcfbf7] z-10 absolute left-0">
           <ul className="flex flex-col gap-10 items-center mx-auto">
             <li>
-              <a href="/work" className="text-6xl">
+              <Link
+                onClick={() => {
+                  setOpen(!isOpen);
+                  setActive(!isActive);
+                }}
+                to="/work"
+                className="text-6xl"
+              >
                 Work
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/about" className="text-6xl">
+              <Link
+                onClick={() => {
+                  setOpen(!isOpen);
+                  setActive(!isActive);
+                }}
+                to="/about"
+                className="text-6xl"
+              >
                 About
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/contact" className="text-6xl">
+              <Link
+                onClick={() => {
+                  setOpen(!isOpen);
+                  setActive(!isActive);
+                }}
+                to="/contact"
+                className="text-6xl"
+              >
                 Contact
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
