@@ -10,11 +10,9 @@ const Navbar = () => {
   return (
     <nav className="flex justify-between my-6 flex-wrap">
       <div className="container mx-auto flex justify-between items-center">
-        <div>
-          <Link to="/" className="text-2xl">
-            Anas Obaid
-          </Link>
-        </div>
+        <Link to="/" className="text-2xl">
+          Anas Obaid
+        </Link>
         <div className="hidden md:flex space-x-6">
           <ul className="flex gap-10 items-center">
             <li>
