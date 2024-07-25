@@ -17,7 +17,7 @@ const Navbar = () => {
       text: "About",
     },
     {
-      slug: "/contact",
+      slug: "mailto:anasobaidpk@gmail.com",
       text: "Contact",
     },
   ];
@@ -25,7 +25,14 @@ const Navbar = () => {
   return (
     <nav className="flex justify-between my-6 flex-wrap">
       <div className="container mx-auto flex justify-between items-center">
-        <Link to="/" className="text-2xl">
+        <Link
+          to="/"
+          className="text-2xl"
+          onClick={() => {
+            setOpen(!isOpen);
+            setActive(!isActive);
+          }}
+        >
           Anas Obaid
         </Link>
         <div className="hidden md:flex space-x-6">
@@ -33,8 +40,8 @@ const Navbar = () => {
             {links.map((link) => (
               <li>
                 <Link
-                  to={link.slug}
                   className="text-xl hover:border-b-2 border-neutral-800 transition-all duration-100"
+                  to={link.slug}
                 >
                   {link.text}
                 </Link>
@@ -58,42 +65,20 @@ const Navbar = () => {
       {isOpen && (
         <div className="md:hidden w-full py-20 mt-10 bg-[#fcfbf7] z-10 absolute left-0">
           <ul className="flex flex-col gap-10 items-center mx-auto">
-            <li>
-              <Link
-                onClick={() => {
-                  setOpen(!isOpen);
-                  setActive(!isActive);
-                }}
-                to="/work"
-                className="text-6xl"
-              >
-                Work
-              </Link>
-            </li>
-            <li>
-              <Link
-                onClick={() => {
-                  setOpen(!isOpen);
-                  setActive(!isActive);
-                }}
-                to="/about"
-                className="text-6xl"
-              >
-                About
-              </Link>
-            </li>
-            <li>
-              <Link
-                onClick={() => {
-                  setOpen(!isOpen);
-                  setActive(!isActive);
-                }}
-                to="/contact"
-                className="text-6xl"
-              >
-                Contact
-              </Link>
-            </li>
+            {links.map((link) => (
+              <li>
+                <Link
+                  onClick={() => {
+                    setOpen(!isOpen);
+                    setActive(!isActive);
+                  }}
+                  to={link.slug}
+                  className="text-6xl hover:border-b-2 border-neutral-800 transition-all duration-100"
+                >
+                  {link.text}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
       )}
