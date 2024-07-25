@@ -5,7 +5,7 @@ interface Props {
 
 const SectionDetails = ({ heading, description }: Props) => {
   return (
-    <>
+    <div className="flex flex-col md:flex-row items-center md:items-start justify-between border-t-2 pt-16">
       <div className="w-full md:w-1/2">
         <h2 className="text-xl md:text-2xl text-center md:text-start font-medium">
           {heading}
@@ -16,7 +16,7 @@ const SectionDetails = ({ heading, description }: Props) => {
           {description}
         </p>
       </div>
-    </>
+    </div>
   );
 };
 
