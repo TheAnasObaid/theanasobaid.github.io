@@ -3,7 +3,7 @@ import heroImage from "../assets/hero.webp";
 const Hero = () => {
   return (
     <div className="max-w-screen-xl mx-auto px-5">
-      <div className="flex flex-col justify-center items-center gap-8 md:gap-10 my-12 md:my-24 lg:my-28">
+      <div className="flex flex-col justify-center items-center gap-8 md:gap-10 mb-4 mt-12 md:mt-24 lg:mt-28">
         <h1 className="text-7xl md:text-9xl xl:text-[160px] text-center font-medium tracking-tight">
           Anas Obaid
         </h1>
