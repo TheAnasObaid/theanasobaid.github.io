@@ -11,7 +11,7 @@ const Hero = () => {
           I am web developer that helps brands fit and thrive culture. I resolve
           consumer challenges explore new creative perspectives.
         </p>
-        <div className="p-3 px-6 rounded-full justify-center items-center gap-3 bg-green-100 ring-1 ring-green-200 flex">
+        <div className="p-3 px-6 rounded-full justify-center items-center gap-3 bg-green-100 ring-1 ring-green-200 hover:ring-green-400 transition-all duration-100 flex">
           <span className="relative flex h-2.5 w-2.5">
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-85"></span>
             <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-500"></span>

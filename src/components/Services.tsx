@@ -3,7 +3,7 @@ import SectionDetails from "./SectionDetails";
 const Services = () => {
   const heading = "Services";
   const description =
-    "My services perform exactly that functions that are needed. To create interfaces that are easy to another master even for inexperienced users work functionality.";
+    "My services perform exactly the functions that are needed. To create websites that are easy to navigate and manage even for inexperienced users with work functionality.";
 
   const services = [
     {

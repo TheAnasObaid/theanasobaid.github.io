@@ -7,6 +7,21 @@ const Navbar = () => {
   const [isOpen, setOpen] = useState(false);
   const [isActive, setActive] = useState(false);
 
+  const links = [
+    {
+      slug: "/work",
+      text: "Work",
+    },
+    {
+      slug: "/about",
+      text: "About",
+    },
+    {
+      slug: "/contact",
+      text: "Contact",
+    },
+  ];
+
   return (
     <nav className="flex justify-between my-6 flex-wrap">
       <div className="container mx-auto flex justify-between items-center">
@@ -15,21 +30,16 @@ const Navbar = () => {
         </Link>
         <div className="hidden md:flex space-x-6">
           <ul className="flex gap-10 items-center">
-            <li>
-              <Link to="/work" className="text-xl">
-                Work
-              </Link>
-            </li>
-            <li>
-              <Link to="/about" className="text-xl">
-                About
-              </Link>
-            </li>
-            <li>
-              <Link to="/contact" className="text-xl">
-                Contact
-              </Link>
-            </li>
+            {links.map((link) => (
+              <li>
+                <Link
+                  to={link.slug}
+                  className="text-xl hover:border-b-2 border-neutral-800 transition-all duration-100"
+                >
+                  {link.text}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
         <div className="md:hidden cursor-pointer">

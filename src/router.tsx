@@ -8,12 +8,11 @@ import HomePage from "./pages/HomePage";
 
 const router = createBrowserRouter([
   {
-    path: "/",
     element: <Root />,
     errorElement: <ErrorPage />,
     children: [
       {
-        path: "",
+        index: true,
         element: <HomePage />,
       },
       {
