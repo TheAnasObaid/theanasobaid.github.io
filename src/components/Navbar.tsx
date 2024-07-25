@@ -17,7 +17,7 @@ const Navbar = () => {
       text: "About",
     },
     {
-      slug: "mailto:anasobaidpk@gmail.com",
+      slug: "#contact",
       text: "Contact",
     },
   ];
@@ -39,12 +39,21 @@ const Navbar = () => {
           <ul className="flex gap-10 items-center">
             {links.map((link) => (
               <li>
-                <Link
-                  className="text-xl hover:border-b-2 border-neutral-800 transition-all duration-100"
-                  to={link.slug}
-                >
-                  {link.text}
-                </Link>
+                {link.slug.startsWith("#") ? (
+                  <a
+                    className="text-xl hover:border-b-2 border-neutral-800 transition-all duration-100"
+                    href={link.slug}
+                  >
+                    {link.text}
+                  </a>
+                ) : (
+                  <Link
+                    className="text-xl hover:border-b-2 border-neutral-800 transition-all duration-100"
+                    to={link.slug}
+                  >
+                    {link.text}
+                  </Link>
+                )}
               </li>
             ))}
           </ul>
